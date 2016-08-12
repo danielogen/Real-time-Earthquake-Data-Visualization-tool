@@ -23,7 +23,7 @@ This visualization tool was entire developed on the LAMP environment. Because th
 
 ### Core Technologies
 
-As of the writing of this document, some of the core technologies that Tower DB uses include:
+As of the writing of this document, some of the core technologies that this tool uses include:
 
 -   PHP 5.4.10
 -   MySQL 5.5.29
@@ -48,6 +48,11 @@ For UI support, this tool uses:
 
 ### Screen Shots
 
+![result-3](https://cloud.githubusercontent.com/assets/15224992/17620676/9c4ad9e2-6096-11e6-9e13-eca2428cd708.PNG)
+![result-2](https://cloud.githubusercontent.com/assets/15224992/17620677/9c514700-6096-11e6-9656-5c4c6d1c064e.PNG)
+![result-1](https://cloud.githubusercontent.com/assets/15224992/17620678/9c52047e-6096-11e6-9b03-ee459885af5f.PNG)
+
+
 ### Installation
 
 
@@ -57,7 +62,9 @@ For UI support, this tool uses:
 ALTER, CREATE TEMPORARY TABLES, CREATE, DELETE, DROP, SELECT, INSERT, UPDATE, REFERENCES, INDEX, LOCK TABLES
 ```
 -   Populate it using the schema (.sql) file located in db directory.
--   Change the DBSERVER NAME, DBUSER NAME and DBPASS PASSWORD located in the constant.php file
+-   Change the DBSERVER NAME, DBUSER NAME and DBPASS PASSWORD located in the **constant.php** file
 -   Restart your web server and point it at your URL. 
 
 ### Errata
+
+For any assistance or correction, please write an email to any of the author listed above.
