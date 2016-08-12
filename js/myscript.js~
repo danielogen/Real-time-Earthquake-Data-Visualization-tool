@@ -1,0 +1,5 @@
+ 		
+ 	//auto-refresh page
+   function AutoRefresh( t ) {
+       setTimeout("location.reload(true);", t);
+    }
