@@ -100,3 +100,9 @@ select#name::-ms-expand {
     margin-left: 355px;
     margin-top: -53px;
 }
+#myModal .modal-content
+{
+    height:580px;
+    width: 800px;
+    overflow:auto;
+}
