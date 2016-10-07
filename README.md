@@ -2,7 +2,7 @@
 
 ## Application Overview and Design
 
-Proscovia Olango (p.olango@gu.ac.ug), Geoffrey Tabo (g.tabo@gu.ac.ug), Daniel Ogenrwot (danielogen@gmail.com), 
+Proscovia Olango (p.olango@gu.ac.ug), Geoffrey Tabo (g.tabo@gu.ac.ug), Daniel Ogenrwot (d.ogenrwot@gu.ac.ug), 
 
 ### Overview
 
@@ -19,13 +19,13 @@ This tool was developed to be easily extendable. Features included are quiet lim
 - Responsive design feature (Map is not yet responsive enough)
 
 ### Design
-This visualization tool was entire developed on the LAMP environment. Because this tool was meant to be lightweight and faster, Google maps and JSON was heavily used. Support for small screens (e.g. mobile devices) was also highly consider.
+This visualization tool was entirely developed on the LAMP environment. Because this tool was meant to be lightweight and faster, Google maps and JSON was heavily used. Support for small screens (e.g. mobile devices) was also highly consider.
 
 ### Core Technologies
 
 As of the writing of this document, some of the core technologies that this tool uses include:
 
--   PHP 5.4.10
+-   PHP 5.6.2
 -   MySQL 5.5.29
 
 ### Other Technologies
@@ -44,7 +44,7 @@ Other dependencies that are bundled with the application include:
 
 For UI support, this tool uses:
 
--   Twitter Bootstrap 2.3.2 – Provides the site’s base CSS
+-   Twitter Bootstrap 3.0.1 – Provides the site’s base CSS
 
 ### Screen Shots
 
