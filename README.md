@@ -1,4 +1,4 @@
-# Real-time Earthquake Data Visualization tool
+# Worldwide Geospatial Visualization of Realtime Earthquake Data
 
 ## Application Overview and Design
 
@@ -12,11 +12,11 @@ The United States Geological Survey (USGS) provides enormous impartial informati
 
 This tool was developed to be easily extendable. Features included are quiet limited as of the writing of this document but newer versions will surely constitute rich feature. Below are lists of features intergrated in this first version.
 
-- Visual earthquake by places and dates
+- Visualize earthquake data by places and dates
 - Google maps markers customization
 - Maps markers description
 - Flexible legend
-- Responsive design feature (Map is not yet responsive enough)
+- Responsive Design (RWD) web approach
 
 ### Design
 This visualization tool was entirely developed on the LAMP environment. Because this tool was meant to be lightweight and faster, Google maps and JSON was heavily used. Support for small screens (e.g. mobile devices) was also highly consider.
@@ -26,7 +26,7 @@ This visualization tool was entirely developed on the LAMP environment. Because 
 As of the writing of this document, some of the core technologies that this tool uses include:
 
 -   PHP 5.6.2
--   MySQL 5.5.29
+-   MySQL 5.6.28
 
 ### Other Technologies
 
@@ -34,7 +34,7 @@ Other dependencies that are bundled with the application include:
 
 #### JavaScript Libraries
 
--   jQuery 1.9.1 – base jQuery JavaScript library
+-   jQuery 1.11.3 – base jQuery JavaScript library
 -   jQuery-ui-1.10.3 - JavaScript library for user interface
     interactions, effects, widgets, and themes
 -   jQuery-ui-map-3.0 – A Google-developed JavaScript library for
@@ -46,7 +46,7 @@ For UI support, this tool uses:
 
 -   Twitter Bootstrap 3.0.1 – Provides the site’s base CSS
 
-### Screen Shots
+### Results
 
 ![result-3](https://cloud.githubusercontent.com/assets/15224992/17620676/9c4ad9e2-6096-11e6-9e13-eca2428cd708.PNG)
 ![result-2](https://cloud.githubusercontent.com/assets/15224992/17620677/9c514700-6096-11e6-9656-5c4c6d1c064e.PNG)
