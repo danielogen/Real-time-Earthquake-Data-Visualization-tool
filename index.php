@@ -38,7 +38,7 @@ include("extracted.php");
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
         <!-- my custom styling -->
-        <link href="css/mycss.css" rel="stylesheet" type="text/css">   
+        <link href="css/mycss.css" rel="stylesheet" type="text/css">
 
         <script src="https://maps.googleapis.com/maps/api/js"></script>
 
@@ -64,9 +64,9 @@ include("extracted.php");
                 <?php
                 //get number of earthquake and their details that occurred today
                 $today = date("Y-m-d");
-                $db_query1 = mysql_query("SELECT eq_title, COUNT(id) AS eq_no_today FROM eq_details
-                                          WHERE eq_date= '{$today}'") or die(mysql_error());
-                $eq_no_today = mysql_fetch_array($db_query1);
+                $db_query1 = mysqli_query($con, "SELECT eq_title, COUNT(id) AS eq_no_today FROM eq_details
+                                          WHERE eq_date= '{$today}'") or die(mysqli_error());
+                $eq_no_today = mysqli_fetch_array($db_query1);
                 ?>
                 <!-- Top Menu Items -->
                 <ul class="nav navbar-right top-nav">
@@ -105,7 +105,7 @@ include("extracted.php");
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav side-nav">
                         <li class="active">
-                            <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>                        
+                            <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                         </li>
                     </ul>
                 </div>
@@ -118,7 +118,7 @@ include("extracted.php");
 
                     <!-- Page Heading -->
                     <!-- <div class="row">
-                        <div class="col-lg-12"> 
+                        <div class="col-lg-12">
                             <ol class="breadcrumb">
                                 <li class="active">
                                     <i class="fa fa-dashboard"></i> Dashboard - Worldwide Geospatial Visualization of Real-time Earthquake Data
@@ -130,22 +130,22 @@ include("extracted.php");
 
                     <div class="row">
                         <!-- my map goes here -->
-                        <div id = 'overlaying'> 
+                        <div id = 'overlaying'>
                             <?php
-                            $db_query = mysql_query('SELECT eq_place, COUNT(eq_place) AS eq_no_place FROM eq_details 
-                                                    GROUP BY eq_place 
-                                                    ORDER BY eq_place ASC') or die(mysql_error());
+                            $db_query = mysqli_query($con, 'SELECT eq_place, COUNT(eq_place) AS eq_no_place FROM eq_details
+                                                    GROUP BY eq_place
+                                                    ORDER BY eq_place ASC') or die(mysqli_error());
 
                             echo '<select  id = "name" name = "places">';
                             echo "<option value = \"\">Filter by Places...</option>";
-                            while ($row = mysql_fetch_array($db_query)) {
+                            while ($row = mysqli_fetch_array($db_query)) {
                                 echo "<option value = \"{$row['eq_place']}\">{$row['eq_place']} ({$row['eq_no_place']})</option>";
                             }
 
                             echo '</select>';
                             ?>
-                        </div> 
-                        <div id = 'advancedsearch'> 
+                        </div>
+                        <div id = 'advancedsearch'>
                             <button class="btn btn-warning btn-advancedsearch">Advanced Filter</button>
                             <form id="frm_advancedsearch" method="get">
                                 <br/>
@@ -157,7 +157,7 @@ include("extracted.php");
                                     <button class="btn btn-sm btn-danger btn-cancel">Cancel</button></p>
                             </form>
                         </div>
-                        <div id = 'legend'> 
+                        <div id = 'legend'>
                             <p>Magnitude
                                 <br/><br/> <img src="icons/blue_dot.png"> ------------------------------- 2.5 - 3.9
                                 <br/> <img src="icons/green_dot.png"> ------------------------------ 4.0 - 4.9
@@ -166,7 +166,7 @@ include("extracted.php");
                         </div>
                         <div id="map">
 
-                        </div>                 
+                        </div>
                     </div>
                     <!-- /.row -->
                 </div>
@@ -212,9 +212,9 @@ include("extracted.php");
 
                 <?php
                     $today = date("Y-m-d");
-                    $db_query3 = mysql_query("SELECT * FROM eq_details WHERE eq_date= '{$today}'
-                                              ORDER BY id DESC ") or die(mysql_error());
-                    while($row = mysql_fetch_array($db_query3)) {
+                    $db_query3 = mysqli_query($con, "SELECT * FROM eq_details WHERE eq_date= '{$today}'
+                                              ORDER BY id DESC ") or die(mysqli_error());
+                    while($row = mysqli_fetch_array($db_query3)) {
                 if ($row['eq_mag'] >= 2.5 && $row['eq_mag'] <= 3.9) {
                     ?>
                     <div class="list-group">
